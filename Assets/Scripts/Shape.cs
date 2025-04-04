@@ -4,5 +4,12 @@ using UnityEngine;
 
 public abstract class Shape : MonoBehaviour
 {
+    [SerializeField]
+    protected MeshRenderer meshRenderer;
 
+    [SerializeField]
+    protected Rigidbody rigidbody;
+
+    [SerializeField]
+    protected int force;
 }
