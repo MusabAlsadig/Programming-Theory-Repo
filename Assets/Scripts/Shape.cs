@@ -12,4 +12,6 @@ public abstract class Shape : MonoBehaviour
 
     [SerializeField]
     protected int force;
+
+    protected abstract void Pushup();
 }

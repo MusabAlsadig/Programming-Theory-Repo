@@ -4,4 +4,8 @@ using UnityEngine;
 
 public class Sphere : Shape
 {
+    protected override void Pushup()
+    {
+        rigidbody.AddForce(transform.up * force, ForceMode.VelocityChange);
+    }
 }
