@@ -4,18 +4,9 @@ using UnityEngine;
 
 public class Capsule : Shape
 {
-    public void SetForce(int force)
-    {
-        this.force = Mathf.Abs(force);
-    }
 
-    public int GetForce()
+    protected override void Push()
     {
-        return force;
-    }
-
-    protected override void Pushup()
-    {
-        rigidbody.AddForce(transform.up * force, ForceMode.Force);
+        rigidbody.AddForce(transform.up * force);
     }
 }

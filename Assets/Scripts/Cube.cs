@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Cube : Shape
 {
-    public void SetForce(int force)
+    protected override void Push()
     {
-        this.force = Mathf.Abs(force);
+        Vector3 forceDirection = GetRandomDirection();
+        rigidbody.AddForce(forceDirection * force);
     }
 
-    public int GetForce()
+    private Vector3 GetRandomDirection()
     {
-        return force;
-    }
-
-    protected override void Pushup()
-    {
-        rigidbody.AddForce(transform.up * force, ForceMode.Acceleration);
+        return new Vector3()
+        {
+            x = Random.Range(-1, 1),
+            y = Random.Range(0.1f, 1),
+            z = Random.Range(-1, 1),
+        }.normalized;
     }
 }

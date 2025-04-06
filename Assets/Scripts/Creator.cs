@@ -22,7 +22,7 @@ public class Creator : MonoBehaviour
     private void CreateRandomObject()
     {
         Vector3 positon = transform.position;
-        positon.x += Random.Range(-10, 10);
+        positon.x += Random.Range(-8, 8);
 
         Shape selectedShape = shapes[Random.Range(0, shapes.Length)];
 

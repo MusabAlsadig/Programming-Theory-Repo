@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Sphere : Shape
 {
-    public void SetForce(int force)
+    protected override void Push()
     {
-        this.force = Mathf.Abs(force);
+        Vector3 forceDirection = GetDirectionAwayFromCamera();
+        rigidbody.AddForce(forceDirection * force, ForceMode.Acceleration);
     }
 
-    public int GetForce()
+    private Vector3 GetDirectionAwayFromCamera()
     {
-        return force;
-    }
-
-    protected override void Pushup()
-    {
-        rigidbody.AddForce(transform.up * force, ForceMode.VelocityChange);
+        Transform cameraTransform = Camera.main.transform;
+        Vector3 direction = transform.position - cameraTransform.position;
+        return direction.normalized;
     }
 }

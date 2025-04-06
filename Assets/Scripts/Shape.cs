@@ -13,5 +13,28 @@ public abstract class Shape : MonoBehaviour
     [SerializeField]
     protected int force;
 
-    protected abstract void Pushup();
+    private void OnMouseDown()
+    {
+        Push();
+        ChangeColor();
+    }
+
+
+    public void SetForce(int force)
+    {
+        this.force = Mathf.Abs(force);
+    }
+
+    public int GetForce()
+    {
+        return force;
+    }
+
+    protected abstract void Push();
+
+    private void ChangeColor()
+    {
+        meshRenderer.material.color = Random.ColorHSV();
+    }
+    
 }
