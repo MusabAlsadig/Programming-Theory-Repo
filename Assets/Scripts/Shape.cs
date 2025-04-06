@@ -19,12 +19,13 @@ public abstract class Shape : MonoBehaviour
         ChangeColor();
     }
 
-
+    // ENCAPSULATION
     public void SetForce(int force)
     {
         this.force = Mathf.Abs(force);
     }
 
+    // ENCAPSULATION
     public int GetForce()
     {
         return force;

@@ -338,9 +338,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shapes:
-  - {fileID: 0}
+  - {fileID: 8252190592542783600, guid: c59d24430f9847444a8039648515a689, type: 3}
   - {fileID: 3379128281864061164, guid: 144e6ecb830217a4da93ee4e78267a24, type: 3}
-  - {fileID: 0}
+  - {fileID: -3144754505565257549, guid: 525e0dae40dce744ea10582b7f701dd3, type: 3}
 --- !u!4 &1670715375
 Transform:
   m_ObjectHideFlags: 0

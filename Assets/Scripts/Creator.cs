@@ -19,6 +19,7 @@ public class Creator : MonoBehaviour
     }
 
     // High level method for abstraction
+    // ABSTRACTION
     private void CreateRandomObject()
     {
         Vector3 positon = transform.position;
